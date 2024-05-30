@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: druina <druina@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: rcruz-an <rcruz-an@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/26 14:23:28 by druina            #+#    #+#             */
-/*   Updated: 2023/08/16 16:30:43 by druina           ###   ########.fr       */
+/*   Created: 2023/11/26 14:23:28 by rcruz-an          #+#    #+#             */
+/*   Updated: 2024/05/30 16:30:43 by rcruz-an         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-// Checks that the input is only numbers
 
 int	check_arg_content(char *arg)
 {
@@ -27,8 +25,6 @@ int	check_arg_content(char *arg)
 	}
 	return (0);
 }
-
-// Checks if the program input is correct
 
 int	check_valid_args(char **argv)
 {
@@ -46,7 +42,6 @@ int	check_valid_args(char **argv)
 		1);
 	return (0);
 }
-// Main function
 
 int	main(int argc, char **argv)
 {

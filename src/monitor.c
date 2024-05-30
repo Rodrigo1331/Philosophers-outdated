@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   monitor.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: druina <druina@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: rcruz-an <rcruz-an@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/11 22:22:47 by druina            #+#    #+#             */
-/*   Updated: 2023/08/16 17:27:17 by druina           ###   ########.fr       */
+/*   Created: 2023/11/11 22:22:47 by rcruz-an          #+#    #+#             */
+/*   Updated: 2023/11/16 17:27:17 by rcruz-an         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-// Print message funtion
 
 void	print_message(char *str, t_philo *philo, int id)
 {
@@ -25,8 +23,6 @@ void	print_message(char *str, t_philo *philo, int id)
 	pthread_mutex_unlock(philo->write_lock);
 }
 
-// Checks if the philosopher is dead
-
 int	philosopher_dead(t_philo *philo, size_t time_to_die)
 {
 	pthread_mutex_lock(philo->meal_lock);
@@ -36,8 +32,6 @@ int	philosopher_dead(t_philo *philo, size_t time_to_die)
 	pthread_mutex_unlock(philo->meal_lock);
 	return (0);
 }
-
-// Check if any philo died
 
 int	check_if_dead(t_philo *philos)
 {
@@ -58,8 +52,6 @@ int	check_if_dead(t_philo *philos)
 	}
 	return (0);
 }
-
-// Checks if all the philos ate the num_of_meals
 
 int	check_if_all_ate(t_philo *philos)
 {
@@ -87,8 +79,6 @@ int	check_if_all_ate(t_philo *philos)
 	}
 	return (0);
 }
-
-// Monitor thread routine
 
 void	*monitor(void *pointer)
 {

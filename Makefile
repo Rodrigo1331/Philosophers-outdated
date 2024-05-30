@@ -31,10 +31,10 @@ $(NAME): $(OBJP)
 	cc $(FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJP)
+	@rm -f $(OBJP)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 

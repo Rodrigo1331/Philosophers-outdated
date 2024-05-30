@@ -3,31 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   routine_actions.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: druina <druina@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: rcruz-an <rcruz-an@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 08:48:15 by druina            #+#    #+#             */
-/*   Updated: 2023/08/17 08:48:44 by druina           ###   ########.fr       */
+/*   Created: 2023/11/17 08:48:15 by rcruz-an          #+#    #+#             */
+/*   Updated: 2023/11/24 08:48:44 by rcruz-an         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-// Think routine funtion
 
 void	think(t_philo *philo)
 {
 	print_message("is thinking", philo, philo->id);
 }
 
-// Dream routine funtion
-
 void	dream(t_philo *philo)
 {
 	print_message("is sleeping", philo, philo->id);
 	ft_usleep(philo->time_to_sleep);
 }
-
-// Eat routine funtion
 
 void	eat(t_philo *philo)
 {

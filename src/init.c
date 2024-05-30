@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: druina <druina@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: rcruz-an <rcruz-an@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/09 12:05:40 by druina            #+#    #+#             */
-/*   Updated: 2023/08/17 08:59:27 by druina           ###   ########.fr       */
+/*   Created: 2023/11/09 12:05:40 by rcruz-an          #+#    #+#             */
+/*   Updated: 2023/11/17 08:59:27 by rcruz-an         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-// Initializing the input from user
 
 void	init_input(t_philo *philo, char **argv)
 {
@@ -25,8 +23,6 @@ void	init_input(t_philo *philo, char **argv)
 	else
 		philo->num_times_to_eat = -1;
 }
-
-// Initializing the philosophers
 
 void	init_philos(t_philo *philos, t_program *program, pthread_mutex_t *forks,
 		char **argv)
@@ -55,8 +51,6 @@ void	init_philos(t_philo *philos, t_program *program, pthread_mutex_t *forks,
 	}
 }
 
-// Initializing the forks mutexes
-
 void	init_forks(pthread_mutex_t *forks, int philo_num)
 {
 	int	i;
@@ -68,8 +62,6 @@ void	init_forks(pthread_mutex_t *forks, int philo_num)
 		i++;
 	}
 }
-
-// Initializing the program structure
 
 void	init_program(t_program *program, t_philo *philos)
 {

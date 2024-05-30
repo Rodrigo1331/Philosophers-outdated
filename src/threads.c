@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   threads.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: druina <druina@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: rcruz-an <rcruz-an@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/11 14:01:57 by druina            #+#    #+#             */
-/*   Updated: 2023/08/17 08:48:42 by druina           ###   ########.fr       */
+/*   Created: 2023/11/11 14:01:57 by rcruz-an          #+#    #+#             */
+/*   Updated: 2023/12/20 08:48:42 by rcruz-an         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-// Checks if the value of dead_flag changed
 
 int	dead_loop(t_philo *philo)
 {
@@ -22,8 +20,6 @@ int	dead_loop(t_philo *philo)
 	pthread_mutex_unlock(philo->dead_lock);
 	return (0);
 }
-
-// Thread routine
 
 void	*philo_routine(void *pointer)
 {
@@ -40,8 +36,6 @@ void	*philo_routine(void *pointer)
 	}
 	return (pointer);
 }
-
-// Creates all the threads
 
 int	thread_create(t_program *program, pthread_mutex_t *forks)
 {

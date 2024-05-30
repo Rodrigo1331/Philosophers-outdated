@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: druina <druina@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: rcruz-an <rcruz-an@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/16 09:17:55 by druina            #+#    #+#             */
-/*   Updated: 2023/08/16 16:31:28 by druina           ###   ########.fr       */
+/*   Created: 2023/11/16 09:17:55 by rcruz-an          #+#    #+#             */
+/*   Updated: 2024/05/28 16:31:28 by rcruz-an         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-// Checks the len of the string
 
 int	ft_strlen(char *str)
 {
@@ -25,7 +23,6 @@ int	ft_strlen(char *str)
 		i++;
 	return (i);
 }
-// Own version of atoi
 
 int	ft_atoi(char *str)
 {
@@ -50,7 +47,6 @@ int	ft_atoi(char *str)
 	}
 	return (sign * nb);
 }
-// Destroys all the mutexes
 
 void	destory_all(char *str, t_program *program, pthread_mutex_t *forks)
 {
@@ -71,8 +67,6 @@ void	destory_all(char *str, t_program *program, pthread_mutex_t *forks)
 	}
 }
 
-// Improved version of sleep function
-
 int	ft_usleep(size_t milliseconds)
 {
 	size_t	start;
@@ -82,8 +76,6 @@ int	ft_usleep(size_t milliseconds)
 		usleep(500);
 	return (0);
 }
-
-// Gets the current time in milliseconds
 
 size_t	get_current_time(void)
 {
