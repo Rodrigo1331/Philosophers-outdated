@@ -6,7 +6,7 @@
 /*   By: rcruz-an <rcruz-an@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 14:23:28 by rcruz-an          #+#    #+#             */
-/*   Updated: 2024/05/30 16:30:43 by rcruz-an         ###   ########.fr       */
+/*   Updated: 2024/05/31 11:24:35 by rcruz-an         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ int	check_valid_args(char **argv)
 	if (ft_atoi(argv[4]) <= 0 || check_arg_content(argv[4]) == 1)
 		return (printf("Invalid time to sleep\n"), 1);
 	if (argv[5] && (ft_atoi(argv[5]) < 0 || check_arg_content(argv[5]) == 1))
-		return (printf("Invalid number of times each philosopher must eat\n"), 
-		1);
+		return (printf("Invalid number of times each philosopher must eat\n"),
+			1);
 	return (0);
 }
 
